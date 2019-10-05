@@ -5,7 +5,7 @@
   "env": {
     "CONFIG_JSON": {
        "description": "wsTLS settings, listen port 80/8080.",
-       "value": "{"inbounds":[{"port":80,"protocol":"vmess","settings":{"clients":[{"id":"ad806487-2d26-4636-98b6-ab85cc8521f7","alterId":64}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/ws"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}"
+       "value": '{"inbounds":[{"port":80,"protocol":"vmess","settings":{"clients":[{"id":"ad806487-2d26-4636-98b6-ab85cc8521f7","alterId":64}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/ws"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'
      }
   },
   "website": "https://github.com/bclswl0827/v2ray-heroku",
