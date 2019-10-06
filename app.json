@@ -1,0 +1,14 @@
+{
+  "name": "V2Ray",
+  "description": "Deploy V2ray to Heroku.",
+  "keywords": ["V2Ray"],
+  "env": {
+    "CONFIG_JSON": {
+       "description": "wsTLS configuration for V2Ray, listen port 80 or 8080.",
+       "value": "no"
+     }
+  },
+  "website": "https://github.com/bclswl0827/v2ray-heroku",
+  "repository": "https://github.com/bclswl0827/v2ray-heroku",
+  "stack": "container"
+ }
