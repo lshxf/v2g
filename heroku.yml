@@ -1,4 +1,4 @@
 build:
   docker:
     web: Dockerfile
-    worker: bclswl0827/v2ray-openshift
+    worker: v2ray-heroku/Dockerfile
