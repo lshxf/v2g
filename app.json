@@ -4,8 +4,8 @@
 	"keywords": ["V2Ray"],
 	"env": {
 		"CONFIG_JSON": {
-			"description": "V2Ray wsTLS 配置，监听 80 或 8080。",
-			"value": "{\"inbounds\":[{\"port\":80,\"protocol\":\"vmess\",\"settings\":{\"clients\":[{\"id\":\"ad806487-2d26-4636-98b6-ab85cc8521f7\",\"alterId\":64}]},\"streamSettings\":{\"network\":\"ws\",\"wsSettings\":{\"path\":\"/ws\"}}}],\"outbounds\":[{\"protocol\":\"freedom\",\"settings\":{}}]}"
+			"description": "V2Ray ws 配置，监听端口需为 443。",
+			"value": "{\"inbounds\":[{\"port\":443,\"protocol\":\"vmess\",\"settings\":{\"clients\":[{\"id\":\"ad806487-2d26-4636-98b6-ab85cc8521f7\",\"alterId\":64}]},\"streamSettings\":{\"network\":\"ws\",\"wsSettings\":{\"path\":\"/ws\"}}}],\"outbounds\":[{\"protocol\":\"freedom\",\"settings\":{}}]}"
 		}
 	},
 	"website": "https://github.com/bclswl0827/v2ray-heroku",
