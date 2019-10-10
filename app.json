@@ -3,9 +3,9 @@
 	"description": "Deploy V2ray to Heroku.",
 	"keywords": ["V2Ray"],
 	"env": {
-		"CONFIG_JSON": {
-			"description": "V2Ray ws 配置，监听端口需为 80。",
-			"value": "{\"inbounds\":[{\"port\":80,\"protocol\":\"vmess\",\"settings\":{\"clients\":[{\"id\":\"ad806487-2d26-4636-98b6-ab85cc8521f7\",\"alterId\":64}]},\"streamSettings\":{\"network\":\"ws\"}}],\"outbounds\":[{\"protocol\":\"freedom\",\"settings\":{}}]}"
+		"UUID": {
+			"description": "V2Ray UUID",
+			"value": "ad806487-2d26-4636-98b6-ab85cc8521f7"
 		}
 	},
 	"website": "https://github.com/bclswl0827/v2ray-heroku",
