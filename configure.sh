@@ -9,7 +9,7 @@ cat /dev/null > /etc/v2ray/config.json
 cat <<-EOF > /etc/v2ray/config.json
 {
 	"inbounds": [{
-		"port": 80,
+		"port": ${PORT},
 		"protocol": "vmess",
 		"settings": {
 			"clients": [{
