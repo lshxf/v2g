@@ -16,12 +16,15 @@ cat <<-EOF > /etc/v2ray/config.json
       "clients": [
         {
           "id": "${UUID}",
-          "alterId": 64
+          "alterId": ${ID}
         }
       ]
     },
     "streamSettings": {
-      "network": "ws"
+      "network": "ws",
+      "wsSettings": {
+        "path": "${PATH}"
+      }
     }
   }
   ],
