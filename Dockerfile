@@ -1,12 +1,6 @@
 FROM alpine:latest
-ENV CONFIG_JSON="{"inbounds":[{"port":80,"protocol":"vmess","settings":{"clients":[{"id":"ad806487-2d26-4636-98b6-ab85cc8521f7","alterId":64}]},"streamSettings":{"network":"ws"}}],"outbounds":[{"protocol":"freedom","settings":{}}]}"
-RUN apk add --no-cache --virtual .build-deps ca-certificates curl bash \
- && curl https://install.direct/go.sh | bash \
- && rm -rf /usr/bin/v2ray/geoip.dat /usr/bin/v2ray/geosite.dat \
- && chgrp -R 0 /etc/v2ray /usr/bin/v2ray \
- && chmod -R g+rwX /etc/v2ray /usr/bin/v2ray
+RUN apk add --no-cache --virtual .build-deps ca-certificates curl bash
 ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
-ENTRYPOINT /configure.sh
-CMD ["bash", "-c", "/usr/bin/v2ray/v2ray", "-config=/etc/v2ray/config.json"]
+CMD /configure.sh
 EXPOSE 80
