@@ -1,6 +1,6 @@
 {
 	"name": "V2Ray",
-	"description": "把 V2ray 部署到 Heroku！<br>建议部署多个应用，实现负载均衡。",
+	"description": "把 V2ray 部署到 Heroku！",
 	"keywords": ["V2Ray"],
 	"env": {
 		"UUID": {
