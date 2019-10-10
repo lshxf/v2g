@@ -8,23 +8,29 @@ cat /dev/null > /etc/v2ray/config.json
 # V2Ray new configuration
 cat <<-EOF > /etc/v2ray/config.json
 {
-	"inbounds": [{
-		"port": ${PORT},
-		"protocol": "vmess",
-		"settings": {
-			"clients": [{
-				"id": "${UUID}",
-				"alterId": 64
-			}]
-		},
-		"streamSettings": {
-			"network": "ws"
-		}
-	}],
-	"outbounds": [{
-		"protocol": "freedom",
-		"settings": {}
-	}]
+  "inbounds": [
+  {
+    "port": ${PORT},
+    "protocol": "vmess",
+    "settings": {
+      "clients": [
+        {
+          "id": "${UUID}",
+          "alterId": 64
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "ws"
+    }
+  }
+  ],
+  "outbounds": [
+  {
+    "protocol": "freedom",
+    "settings": {}
+  }
+  ]
 }
 EOF
 /usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json
