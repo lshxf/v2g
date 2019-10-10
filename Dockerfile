@@ -3,8 +3,8 @@ ENV CONFIG_JSON="{"inbounds":[{"port":80,"protocol":"vmess","settings":{"clients
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl bash \
  && curl https://install.direct/go.sh | bash \
  && rm -rf /usr/bin/v2ray/geoip.dat /usr/bin/v2ray/geosite.dat \
- && chgrp -R 0 /etc/v2ray \
- && chmod -R g+rwX /etc/v2ray
+ && chgrp -R 0 /etc/v2ray /usr/bin/v2ray \
+ && chmod -R g+rwX /etc/v2ray /usr/bin/v2ray
 ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
 ENTRYPOINT /configure.sh
