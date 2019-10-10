@@ -1,19 +1,11 @@
 {
 	"name": "V2Ray",
-	"description": "Deploy V2ray to Heroku.",
+	"description": "把 V2ray 部署到 Heroku！<br>建议部署多个应用，实现负载均衡。",
 	"keywords": ["V2Ray"],
 	"env": {
 		"UUID": {
 			"description": "V2Ray UUID",
 			"value": "ad806487-2d26-4636-98b6-ab85cc8521f7"
-		},
-		"ID": {
-			"description": "V2Ray AlterID",
-			"value": "64"
-		},
-		"PATH": {
-			"description": "V2Ray WebSocket Path",
-			"value": "/ws"
 		}
 	},
 	"website": "https://github.com/bclswl0827/v2ray-heroku",
