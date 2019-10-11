@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 # Install V2Ray
-curl https://install.direct/go.sh | bash
+curl https://install.direct/go.sh | sh
 # Remove extra functions
 rm -rf /usr/bin/v2ray/geosite.dat /usr/bin/v2ray/geoip.dat
 # Clear previous configuration
