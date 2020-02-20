@@ -5,8 +5,7 @@ mkdir /usr/bin/v2ray /etc/v2ray
 touch /etc/v2ray/config.json
 unzip /v2ray.zip -d /usr/bin/v2ray
 # Remove /v2ray.zip and other useless functions
-rm `ls /usr/bin/v2ray | grep -v "v2"`
-rm -rf /v2ray.zip /usr/bin/v2ray/v2ray.sig /usr/bin/v2ray/v2ctl.sig 
+rm -rf /v2ray.zip
 # V2Ray new configuration
 cat <<-EOF > /etc/v2ray/config.json
 {
