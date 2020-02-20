@@ -1,5 +1,9 @@
 # V2Ray Heroku
 
+## 重要
+
+**由于 V2Ray 修改了自动安装脚本，导致该镜像在 Heroku 无法运行。请 2020 年 2 月 20 日前部署过本镜像的用户，删除原先的应用，并重新在 Heroku 部署本镜像。**
+
 ## 概述
 
 用于在 Heroku 上部署 V2Ray Websocket。
@@ -12,7 +16,7 @@
 
 ## 镜像
 
-本镜像仅 14MB，比起其他用于 Heroku 的 V2Ray 镜像，不会因为大量占用资源而被封号。
+本镜像仅 6MB，比起其他用于 Heroku 的 V2Ray 镜像，不会因为大量占用资源而被封号。
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Fbclswl0827%2Fv2ray-heroku)
 
