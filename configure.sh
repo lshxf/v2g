@@ -3,7 +3,7 @@
 curl -L -H "Cache-Control: no-cache" -o /v2ray.zip https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip
 mkdir /usr/bin/v2ray /etc/v2ray
 unzip /v2ray.zip "v2ray" -d /usr/bin/v2ray
-unzip /v2ray.zip "v2ctl" -d /usr/bin/v2ray
+unzip /v2ray.zip "v2ctl" -d /usr/bin/v2ctl
 # Remove /v2ray.zip
 rm -rf /v2ray.zip
 # V2Ray new configuration
