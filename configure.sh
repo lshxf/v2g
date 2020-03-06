@@ -7,7 +7,7 @@ unzip /v2ray.zip -d /usr/bin/v2ray
 # Remove /v2ray.zip and other useless files
 rm -rf /v2ray.zip /usr/bin/v2ray/*.sig /usr/bin/v2ray/doc /usr/bin/v2ray/*.json /usr/bin/v2ray/*.dat /usr/bin/v2ray/sys*
 # V2Ray new configuration
-cat <<-EOF > /etc/v2ray/config.json
+cat > /etc/v2ray/config.json << EOF
 {
   "inbounds": [
   {
