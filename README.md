@@ -30,9 +30,9 @@
 
 ## 注意
 
-WebSocket 路径为 /。
+WebSocket 路径为 `/`。
 
-AlterID 为 64。
+`alterId` 为 `4`。
 
 V2Ray 将在部署时自动安装最新版本。
 
