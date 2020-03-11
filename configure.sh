@@ -11,8 +11,8 @@ install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl
 rm -rf /tmp/v2ray
 
 # V2Ray new configuration
-install -d /etc/v2ray
-cat << EOF > /etc/v2ray/config.json
+install -d /usr/local/etc/v2ray
+cat << EOF > /usr/local/etc/v2ray/config.json
 {
     "inbounds": [
         {
@@ -41,4 +41,4 @@ cat << EOF > /etc/v2ray/config.json
 EOF
 
 # Run V2Ray
-/usr/local/bin/v2ray -config /etc/v2ray/config.json
+/usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json
