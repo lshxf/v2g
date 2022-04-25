@@ -1,0 +1,48 @@
+name: Build wireguard-go for Padavan
+
+on: 
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 初始化
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        #sudo apt-get update
+        wget -O /tmp/golang.tar.gz https://dl.google.com/go/go1.13.7.linux-amd64.tar.gz
+        sudo tar -C /usr/local -xvzf /tmp/golang.tar.gz
+        export PATH=$PATH:/usr/local/go/bin
+    - name: 编译wireguard-go
+      run: |
+        mkdir -p /tmp/gobuild/ && cd /tmp/gobuild/
+        git clone https://git.zx2c4.com/wireguard-go
+        cd wireguard-go
+        export GOPATH="/tmp/gobuild/"
+        env GOOS=linux GOARCH=mipsle go build -v -o "wireguard-go"
+    - name : 上传wireguard-go
+      uses: actions/upload-artifact@master
+      with:
+        name: wireguard-go
+        path: /tmp/gobuild/wireguard-go/wireguard-go
+    - name: 编译wireguard-tools
+      run: |
+        cd /tmp
+        git clone https://git.zx2c4.com/wireguard-tools
+        git clone git://git.netfilter.org/libmnl
+        cd /tmp/libmnl/
+        ./autogen.sh --disable-shared --host=mipsel-linux-uclibc
+        ./configure
+        make
+        cd /tmp/wireguard-tools/src/
+        env CFLAGS=-I/tmp/libmnl/include LDFLAGS=-L/tmp/libmnl/src/.libs make        
+    - name : 上传wireguard-tools
+      uses: actions/upload-artifact@master
+      with:
+        name: wireguard-tools
+        path: /tmp/wireguard-tools/src/wg
